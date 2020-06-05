@@ -1,0 +1,1 @@
+package com.clinic.common.bo;
