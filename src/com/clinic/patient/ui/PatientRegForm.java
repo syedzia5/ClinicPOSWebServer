@@ -1,29 +1,23 @@
-package com.clinic.utils;
+package com.clinic.patient.ui;
 
 import java.io.IOException;
-import java.util.Map;
-
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.clinic.common.bo.RequestParams;
-
 /**
- * Servlet implementation class TestServlet
+ * Servlet implementation class PatientRegForm
  */
-@WebServlet("/TestServlet")
-@MultipartConfig
-public class TestServlet extends HttpServlet {
+@WebServlet("/PatientRegForm")
+public class PatientRegForm extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public TestServlet() {
+    public PatientRegForm() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,12 +27,7 @@ public class TestServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	    Map<String,String[]> rm = request.getParameterMap();
-        RequestParams rp = new RequestParams(rm);
-        
-        System.out.println("Request Parameters Received: "+rp.toString());
-
-		response.getWriter().append("Served at: ").append(request.getContextPath()).append(rp.toString());
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

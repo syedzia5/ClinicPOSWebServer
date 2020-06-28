@@ -2,7 +2,7 @@ package com.clinic.common.datarec;
 
 public class UserProfile {
 
-	int uid;
+	long uid;
 	
 	private int role;
 	private String rolename;
@@ -44,7 +44,8 @@ public class UserProfile {
 	private int isActive;
 	
 	public UserProfile() {
-		// TODO Auto-generated constructor stub
+		// TODO Auto-generated constructor stubuid
+		uid = -1;
 		country = 1;
 		countryName = "India";
 		role	=	-1	;
@@ -226,10 +227,10 @@ public class UserProfile {
 		password = ipassword;
 	}
 	
-	public int uid() {
+	public long uid() {
 		return uid;
 	}
-	public void uid(int iuid) {
+	public void uid(long iuid) {
 		uid = iuid;
 	}
 	
